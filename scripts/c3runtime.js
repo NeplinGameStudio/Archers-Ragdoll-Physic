@@ -2574,6 +2574,14 @@ self.C3_ExpressionFuncs = [
 		() => "kukla",
 		() => -0.05,
 		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0(2, 3);
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0(0.5, 1);
+		},
+		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => (v0.GetValue() - 1);
 		},
@@ -2581,7 +2589,7 @@ self.C3_ExpressionFuncs = [
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0("level1", "level2", "level3", "level4", "level5", "level6", "level7", "level8", "level9", "level10", "level11", "level12", "level13", "level14", "level15", "level16", "level17", "level18", "level19", "level20");
 		},
-		() => "Archer Ragdoll Physics",
+		() => "Archers Ragdoll Physics",
 		() => 1056,
 		() => "Choose Game Mode",
 		() => "menu_bg",
